@@ -64,9 +64,9 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 
 "<--------- UI Settings ---------------->"
 
-let g:airline_theme='one'
+let g:airline_theme='oceanic'
 set background=dark
-colorscheme one 
+colorscheme OceanicNext 
 
 "<----------------------------------------->
 
