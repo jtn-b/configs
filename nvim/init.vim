@@ -13,6 +13,10 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rakr/vim-one'
 Plug 'altercation/vim-colors-solarized'
+Plug 'ryanoasis/vim-devicons'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'bagrat/vim-buffet'
+
 
 "<---------Utils------------------>"
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -23,6 +27,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'majutsushi/tagbar'
+Plug 'turbio/bracey.vim' 
+Plug 'tpope/vim-surround'
 "...
 
 
@@ -31,8 +37,8 @@ call plug#end()
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
-set encoding=utf-8                      " The encoding displayed
-set fileencoding=utf-8                  " The encoding written to file
+set encoding=UTF-8                      " The encoding displayed
+set fileencoding=UTF-8                  " The encoding written to file
 set ruler              			        " Show the cursor position all the time
 set title
 set mouse=a                             " Enable your mouse
@@ -42,7 +48,7 @@ set t_Co=256                            " Support 256 colors
 set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set cursorline                          " Enable highlighting of the current line
-set showtabline=2                       " Always show tabs
+set showtabline=2                      " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
@@ -64,7 +70,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 
 "<--------- UI Settings ---------------->"
 
-let g:airline_theme='oceanic'
+let g:airline_theme='one'
 set background=dark
 colorscheme OceanicNext 
 
@@ -84,6 +90,7 @@ let g:user_emmet_leader_key=','
 " <---------- Key Bindings ------------------->
 "TagBar Toggler
 nmap <F8> :TagbarToggle<CR>
+
 "NERDCommentor
 map <C-_> <Leader>c<Leader>
 "NERDTreeToggle 
@@ -108,3 +115,9 @@ nnoremap <C-Down> <C-w>j
 nnoremap <C-Up> <C-w>k
 nnoremap <C-Left> <C-w>h
 nmap <Leader>t :r ~/Templates/cptemp2.cpp
+
+" Use alt + hjkl to resize windows
+nnoremap <silent> <M-j>    :resize -2<CR>
+nnoremap <silent> <M-k>    :resize +2<CR>
+nnoremap <silent> <M-h>    :vertical resize -2<CR>
+nnoremap <silent> <M-l>    :vertical resize +2<CR>
